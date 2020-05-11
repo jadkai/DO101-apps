@@ -28,6 +28,7 @@ router.post('/get_weather', async function (req,res) {
       let unit_hex = (UNITS == 'imperial') ? '&#8457' : '&#8451';
       if (UNITS !== 'imperial') {
         console.log('WARNING: units are not imperial; they are ' + UNITS);
+        console.log('process.evn.UNITS is ' + process.env.UNITS);
       }
       else {
         console.log('Units ARE imperial');
